@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry ❤️</title>
+
+<style>
+    body{
+        margin:0;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card{
+        background:white;
+        padding:40px;
+        width:350px;
+        text-align:center;
+        border-radius:20px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.2);
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+        0%,100%{transform:translateY(0);}
+        50%{transform:translateY(-10px);}
+    }
+
+    h1{
+        color:#ff4b5c;
+        margin-bottom:10px;
+    }
+
+    p{
+        color:#444;
+        line-height:1.6;
+    }
+
+    button{
+        margin-top:20px;
+        padding:12px 25px;
+        border:none;
+        background:#ff4b5c;
+        color:white;
+        border-radius:25px;
+        font-size:16px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background:#e63e4d;
+        transform:scale(1.05);
+    }
+
+    .hidden-message{
+        display:none;
+        margin-top:15px;
+        color:#ff4b5c;
+        font-weight:bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>I'm Sorry ❤️</h1>
+
+    <p>
+        Hey Aastha <br><br>
+        I know I messed up, and if I could go back and fix it, I would without a second thought.  
+        Hurting you was never my intention. You mean too much to me to let my mistake define us.  
+        <br><br>
+        I'm not perfect, but my love for you is real — and so is this apology.
+    </p>
+
+    <button onclick="showMessage()">Tap if you still believe in us</button>
+
+    <div class="hidden-message" id="message">
+        I'll keep choosing you. Today, tomorrow, always. 💕
+    </div>
+</div>
+
+<!-- Hidden audio -->
+<audio id="bgMusic">
+  <source src="0202.MP3" type="audio/mpeg">
+</audio>
+
+<script>
+function showMessage() {
+    document.getElementById("message").style.display = "block";
+    document.getElementById("bgMusic").play();
+}
+</script>
+
+</body>
+</html>
